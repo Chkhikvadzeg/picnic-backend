@@ -5,7 +5,7 @@ import cors from 'cors';
 
 const app = express();
 app.use(cors({ origin: true }));
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.get('/', (_, res) => {
   res.send('Hello World!');
